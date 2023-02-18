@@ -1,0 +1,305 @@
+@import 'global';
+@import 'vars';
+@import 'friends';
+
+
+.hero {
+    background: url(../../../assets/images/start-screen-gradient-background.jpg), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+    height: 908px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 180px;
+
+    @include md-block(){
+        padding-top: 150px;        
+        min-height: 90vh;
+        height: auto;
+        padding-bottom: 0%;
+    }
+
+    @include sm-block() {
+        padding-top: 0;
+        min-height: 80vh;
+        height: auto;
+        padding-bottom: 0%;
+    }
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 42px;
+
+        @include md-block() {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        @include sm-block() {
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 105px;
+        }
+
+        &-wrapper {
+            padding-top: 163px;
+
+            @include md-block () {
+                padding: 0 124px 58px;
+            }
+
+            @include sm-block() {
+                padding: 150px 0 0;
+            }
+            &__title {
+                color: #fff;
+                max-width: 310px;
+                
+                @include sm-block() {
+                    font-size: 25px; 
+                    max-width: 214px;
+                    margin: 0 auto;
+                }
+            }
+
+            &__text {
+                color: $gray;
+                margin: 42px 0;
+
+                @include md-block() {
+                    max-width: 460px;
+                }
+
+                @include sm-block() {
+                    max-width: 300px;
+                    margin: 42px auto;
+                }
+                
+            }
+
+            &__btn {
+                transition: 0.3s linear;
+
+                @include md-block() {
+                    margin: 0 126px;
+                }
+
+                @include sm-block() {
+                    margin: 0 auto;
+                }
+            }
+
+            @include sm-block() {
+                text-align: center;
+            }   
+        }
+
+        &-img {
+            width: 698px;
+            height: 728px;
+
+            @include md-block() {
+                width: 569px;
+                height: 593px;
+                margin-left: auto;
+            }
+
+            @include sm-block() {
+                width: 260px;
+                height: 272px;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.about {
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 120px;
+
+        @include md-block() {
+            flex-direction: column-reverse;
+            gap: 80px;
+        }
+
+        @include sm-block() {
+            flex-direction: column-reverse;
+            gap: 42px;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &-title {
+        max-width: 370px;
+
+        @include sm-block() {
+            max-width: 265px;
+            margin: 0 auto;
+        }
+    }
+
+    &-text {
+        color: $gray-dark;
+        max-width: 430px;
+
+        @include sm-block() {
+            padding: 0 15px;
+            text-align: justify;
+        }
+    }
+
+    &-img {
+        @include sm-block() {
+            width: 260px;
+            height: 354px;
+        }
+    }
+}
+
+.help {
+    &-title {
+        margin: 0 auto 60px;
+        max-width: 310px;
+        text-align: center;
+
+        @include sm-block() {
+            max-width: 220px;
+        }
+    }
+
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 55px 120px;
+
+        @include md-block() {
+            margin: 0 39px;
+            gap: 55px 60px;
+        }
+
+        @include sm-block() {
+            margin: 0 auto;
+            gap: 30px;
+            max-width: 290px;
+            justify-content: flex-start;
+        }
+    }
+
+    &-item {
+        text-align: center;
+
+        @include md-block() {
+            width: 170px;
+            height: 113px;
+        }
+
+        @include sm-block() {
+            width: 130px;
+            height: 87px;
+        }
+
+        &__img {
+            margin-bottom: 25px;
+
+            @include sm-block() {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 17px;
+            }
+        }
+
+        &__title {
+            @include sm-block () {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.donation {
+    background: $section-background;
+    
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        @include md-block() {
+            flex-direction: column-reverse;
+            gap: 60px;
+        }
+
+        @include sm-block() {
+            flex-direction: column-reverse;
+            gap: 42px
+        }
+        
+    }
+    
+    &-img {
+        @include sm-block() {
+            width: 260px;
+            height: 135px;
+        }
+    }
+
+    &-info {
+        max-width: 380px;
+    }
+
+    &-title {
+        max-width: 300px;
+        margin-bottom: 20px;
+        
+        @include sm-block() {
+            max-width: 220px;
+            margin: 0 auto 20px;
+        }
+    }
+
+    &-subtitle {
+        @include sm-block() {
+            text-align: center;
+        }
+    }
+
+    &-btn {
+        margin: 20px 0;
+        border-radius: 9px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        color: $black-light;
+        gap: 15px;
+        font-size: 20px;
+        line-height: 1.15;
+        @include sm-block() {
+            font-size: 15px;
+            margin: 20px auto;
+        }
+    
+    }
+
+    &-text {
+        color: #b2b2b2;
+        font-size: 12px;
+        font-style: italic;
+        @include sm-block() {
+            text-align: justify;
+            margin-top: 20px;
+            max-width: 280px;
+        }
+        
+    }
+}

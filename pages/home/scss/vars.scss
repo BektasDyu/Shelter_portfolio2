@@ -1,0 +1,24 @@
+$arial: Arial, sans-serif;
+$georgia: 'Georgia', sans-serif;
+
+$pink: #f1cdb3;
+$section-background: #f6f6f6;
+$black-dark: #292929;
+$black-light: #545454;
+$gray: #cdcdcd;
+$gray-dark: #4c4c4c;
+$white: #fafafa;
+
+@mixin md-block () {
+    @media screen and (max-width:991px){
+        @content;
+        
+    }
+}
+
+@mixin sm-block () {
+    @media screen and (max-width:768px){
+        @content;
+        
+    }
+}

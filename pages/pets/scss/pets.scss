@@ -1,0 +1,129 @@
+@import '../../home/scss/vars.scss';
+@import '../../home/scss/global.scss';
+@import '../../home/scss/friends.scss';
+
+
+.header {
+    background-color: #fff;
+    padding: 30px 0;
+
+    &-logo {
+        &__title {
+            color: $black-light;
+        }
+        &__text {
+            color: $black-dark;
+        }
+    }
+}
+
+.nav-menu__item-link {
+    color: $black-light;
+}
+.nav-menu__item-link.active {
+    color: $black-dark;
+}
+
+.friends{
+    padding: 200px 0 100px;
+
+    @include md-block() {
+        padding-bottom: 70px;
+    }
+
+    @include sm-block() {
+        padding: 142px 10px 42px;
+    }
+
+    &-slider {
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(4, 270px);
+            gap: 30px 40px;
+            padding-top: 45px;
+            margin-bottom: 60px;
+            
+            @include md-block() {
+                grid-template-columns: repeat(2, 270px);
+                justify-content: center;
+                padding-top: 30px;
+                margin-bottom: 40px;
+                
+            }
+
+            @include sm-block() {
+                display: flex;
+                flex-direction: column;
+                max-width: 270px;
+                margin: 0 auto 42px;
+            }
+        }
+
+
+        &__item {
+
+            @include md-block() {
+                
+                &:nth-last-child(-n+2)  {
+                    display: none;
+                }
+            }
+
+            @include sm-block() {
+
+                &:nth-last-child(-n+5)  {
+                    display: none;
+                }
+            }
+        }
+        
+        &__arrow {
+            padding: 0;
+            
+            @include sm-block() {
+                position: static;
+            }
+        }
+
+    }
+
+    &-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        @include sm-block() {
+            gap: 10px;
+        }
+
+    }
+
+    &-button {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        
+        @include sm-block() {
+            display: flex;
+            flex-direction: row;       
+        }
+
+        &__inactive {
+            background: transparent;
+            border: 2px solid $gray;
+         
+            &:hover {
+                background: transparent;
+            }
+        }
+
+        &__active {
+            background: transparent;
+        }
+    }
+
+}
+
